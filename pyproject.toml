@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "web-research-mcp"
+version = "1.0.0"
+description = "MCP server that gives AI agents web search, content extraction, and deep research capabilities"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+keywords = ["mcp", "web", "research", "ai", "search", "web-scraping"]
+
+authors = [
+    {name = "Hermes Agent", email = "mrdwarf7twitch@gmail.com"},
+]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+]
+
+dependencies = [
+    "mcp>=1.0.0",
+    "httpx>=0.28.0",
+    "beautifulsoup4>=4.12.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/MrDwarf7/web-research-mcp"
+Repository = "https://github.com/MrDwarf7/web-research-mcp"
+
+[project.scripts]
+web-research-mcp = "web_research_mcp:cli_entry"
+
+[tool.setuptools.packages.find]
+where = ["src"]
